@@ -1,104 +1,35 @@
 {
-  "id": "386c9c1d-83fe-4028-9dc9-d4b6a53f43fb",
+  "id": "b67f0b79-9e7f-4b6c-add2-d9e862f270b5",
   "version": "2.0",
   "name": "Walmart",
-  "url": "https://grocery.walmart.com",
+  "url": "https://grocery.walmart.com/",
   "tests": [{
-    "id": "f997b664-2762-41ba-8e37-bff026103771",
+    "id": "8118c773-4c08-46d5-a2c8-1756ad403ddb",
     "name": "Walmart Shopping",
     "commands": [{
-      "id": "473fb682-f8c9-49f1-a6e2-c8e299583d6c",
+      "id": "0b420b60-3f75-4a32-8f69-d47202aa81f0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [\"https://grocery.walmart.com/ip/Great-Value-Large-White-Eggs-12-count-24-oz/145051970\", \"https://grocery.walmart.com/ip/Great-Value-Whole-Milk-1-Gallon-128-Fl-Oz/10450114\", \"https://grocery.walmart.com/ip/Fun-Pops-Fruit-Flavored-Freeze-Pops-3-Oz-36-Count/51259152\", \"https://grocery.walmart.com/ip/BIGS-Vlasic-Dill-Pickle-Sunflower-Seeds-5-35-oz-Bag/46161843\", \"https://grocery.walmart.com/ip/Tropicana-Pure-Premium-No-Pulp-100-Orange-Juice-8-Fl-Oz-6-Count/13448735\", \"https://grocery.walmart.com/ip/Purina-ONE-Natural-Grain-Free-Pate-Wet-Cat-Food-Chicken-Recipe-3-oz-Pull-Top-Can/17252375\", \"https://grocery.walmart.com/ip/Arizona-Green-Tea-with-Ginseng-Honey-23-Fl-Oz/15603565\", \"https://grocery.walmart.com/ip/Welch-s-Mixed-Fruit-Snacks-Value-Pack-0-9-Oz-40-Count/53479012\", \"https://grocery.walmart.com/ip/Pringles-Variety-Pack-Original-Sour-Cream-Onion-and-Cheddar-Cheese-Potato-Crisps-Chips-19-3-Oz-27-Count/685744035\", \"https://grocery.walmart.com/ip/Ricos-Nacho-Cheese-Sauce-4-ct/10451484\", \"https://grocery.walmart.com/ip/Cherubs-Snacking-Tomatoes-1-dry-pint/23569850\", \"https://grocery.walmart.com/ip/MR-PLUMBER-32OZ-DRAIN-OPENER/22142294\", \"https://grocery.walmart.com/ip/Bananas-each/44390948\", \"https://grocery.walmart.com/ip/Sprite-Lemon-Lime-Soda-12-Fl-Oz-12-Count/10291611\", \"https://grocery.walmart.com/ip/Coca-Cola-Soda-Soft-Drink-12-fl-oz-12-Pack/12166733?selected=true\", \"https://grocery.walmart.com/ip/BIGS-Vlasic-Dill-Pickle-Sunflower-Seeds-5-35-oz-Bag/46161843\", \"https://grocery.walmart.com/ip/Mission-Carb-Balance-Soft-Taco-Whole-Wheat-Tortillas-8-Count/121609670\", \"https://grocery.walmart.com/ip/Slim-Jim-Smoked-Snack-Stick-Pantry-Pack-Original-0-28-Ounce-Stick-46-Count/834187603\", \"https://grocery.walmart.com/ip/COFFEE-MATE-NATURAL-BLISS-Almond-Milk-Caramel-All-Natural-Liquid-Coffee-Creamer-16-Fl-Oz-Bottle-Non-Dairy-Creamer/978498163\", \"https://grocery.walmart.com/ip/ACT-II-Butter-Lovers-Microwave-Popcorn-2-75-Oz-18-Ct/46461861\", \"https://grocery.walmart.com/ip/Cherubs-Snacking-Tomatoes-1-dry-pint/23569850\", \"https://grocery.walmart.com/ip/Mission-Soft-Taco-Flour-Tortillas-16-Count/12166968\", \"https://grocery.walmart.com/ip/Ol-Roy-Bark-n-Bac-n-Dog-Treats-Lean-25-oz/15902627\", \"https://grocery.walmart.com/ip/Freshness-Guaranteed-Boneless-Chicken-Breasts-Family-Pack-4-6-5-75-lb/27935840\", \"https://grocery.walmart.com/ip/Great-Value-Everyday-Paper-Lunch-Plates-8-5-8-100-Count/44390998\", \"https://grocery.walmart.com/ip/On-the-Border-Mexican-Grill-Cantina-Thins-Tortilla-Chips-16-Oz/21738570\"]",
+      "targets": [],
+      "value": "urlList"
+    }, {
+      "id": "59ca30b3-d53d-464e-bcbe-c030211ade71",
+      "comment": "",
+      "command": "forEach",
+      "target": "urlList",
+      "targets": [],
+      "value": "iterator"
+    }, {
+      "id": "0d5f536e-433a-469c-8ce1-153c2af04592",
       "comment": "",
       "command": "open",
-      "target": "/",
+      "target": "${iterator}",
       "targets": [],
       "value": ""
     }, {
-      "id": "76eb1565-64a8-44f7-9c73-85a7dd563fe6",
-      "comment": "Open Eggs",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/Great-Value-Large-White-Eggs-12-count-24-oz/145051970",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
-      "targets": [
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "e1e66ead-d757-4980-a864-c48b9b0e0057",
-      "comment": "Open Milk",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/Great-Value-Whole-Milk-1-Gallon-128-Fl-Oz/10450114",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "d6515c1b-2b9c-4a59-9554-35b51eb1feec",
-      "comment": "Open Fun Pops Icicles",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/Fun-Pops-Fruit-Flavored-Freeze-Pops-3-Oz-36-Count/51259152",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "96849db3-1327-4f79-a2f5-922447521eba",
-      "comment": "Open Dills Sunflower Seeds",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/BIGS-Vlasic-Dill-Pickle-Sunflower-Seeds-5-35-oz-Bag/46161843",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "f64d3c57-5029-4c74-83b6-799071506567",
+      "id": "5f858893-f492-49c8-9e16-6096e1a1dfc5",
       "comment": "",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/Tropicana-Pure-Premium-No-Pulp-100-Orange-Juice-8-Fl-Oz-6-Count/13448735",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
       "command": "click",
       "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
       "targets": [
@@ -110,434 +41,21 @@
       ],
       "value": ""
     }, {
-      "id": "c96b6af3-99c6-4054-9c12-f5e757ccaebb",
+      "id": "dc4cd73f-867f-4108-a32e-8c19eb3c0f9a",
       "comment": "",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/Purina-ONE-Natural-Grain-Free-Pate-Wet-Cat-Food-Chicken-Recipe-3-oz-Pull-Top-Can/17252375",
+      "command": "end",
+      "target": "",
       "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "b4cf45be-f9c7-4b83-ba12-7d54979248a0",
-      "comment": "Arizona Green Tea",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/Arizona-Green-Tea-with-Ginseng-Honey-23-Fl-Oz/15603565",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "54bd9c91-18c9-4183-a6a1-248fe5bdcc93",
-      "comment": "Fruit Snacks",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/Welch-s-Mixed-Fruit-Snacks-Value-Pack-0-9-Oz-40-Count/53479012",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "ba6612c5-3f42-4d1f-b835-12813b275938",
-      "comment": "Pringles Chips",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/Pringles-Variety-Pack-Original-Sour-Cream-Onion-and-Cheddar-Cheese-Potato-Crisps-Chips-19-3-Oz-27-Count/685744035",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "d86a1e1d-4b94-4c79-8a43-4a9cf727afb6",
-      "comment": "Nacho Cheese Sauce",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/Ricos-Nacho-Cheese-Sauce-4-ct/10451484",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "fa5c431a-2fe2-42ca-bf02-1ebd2f49afa8",
-      "comment": "Cherubs Tomatoes",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/Cherubs-Snacking-Tomatoes-1-dry-pint/23569850",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "a0016786-3264-4f7e-a77d-997be5b380ed",
-      "comment": "Mister Plumber",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/MR-PLUMBER-32OZ-DRAIN-OPENER/22142294",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "a6081c2f-84a0-493e-a627-fed615b77139",
-      "comment": "Bananas",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/Bananas-each/44390948",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "a6081c2f-84a0-493e-a627-fed615b77139",
-      "comment": "Sprite (12 Count)",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/Sprite-Lemon-Lime-Soda-12-Fl-Oz-12-Count/10291611",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "a6081c2f-84a0-493e-a627-fed615b77139",
-      "comment": "Coke (12 Count)",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/Coca-Cola-Soda-Soft-Drink-12-fl-oz-12-Pack/12166733?selected=true",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "a6081c2f-84a0-493e-a627-fed615b77139",
-      "comment": "Dill-Flavored Sunflower Seeds",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/BIGS-Vlasic-Dill-Pickle-Sunflower-Seeds-5-35-oz-Bag/46161843",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "a6081c2f-84a0-493e-a627-fed615b77139",
-      "comment": "Mission Carb Balance Whole-Wheat Tortillas",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/Mission-Carb-Balance-Soft-Taco-Whole-Wheat-Tortillas-8-Count/121609670",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "a6081c2f-84a0-493e-a627-fed615b77139",
-      "comment": "Slim Jims",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/Slim-Jim-Smoked-Snack-Stick-Pantry-Pack-Original-0-28-Ounce-Stick-46-Count/834187603",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "a6081c2f-84a0-493e-a627-fed615b77139",
-      "comment": "Coffee Mate",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/COFFEE-MATE-NATURAL-BLISS-Almond-Milk-Caramel-All-Natural-Liquid-Coffee-Creamer-16-Fl-Oz-Bottle-Non-Dairy-Creamer/978498163",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "a6081c2f-84a0-493e-a627-fed615b77139",
-      "comment": "Act II Popcorn",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/ACT-II-Butter-Lovers-Microwave-Popcorn-2-75-Oz-18-Ct/46461861",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "a6081c2f-84a0-493e-a627-fed615b77139",
-      "comment": "Cherubs Tomatoes",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/Cherubs-Snacking-Tomatoes-1-dry-pint/23569850",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "a6081c2f-84a0-493e-a627-fed615b77139",
-      "comment": "Mission Flour Tortillas",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/Mission-Soft-Taco-Flour-Tortillas-16-Count/12166968",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "a6081c2f-84a0-493e-a627-fed615b77139",
-      "comment": "Ol Roy Dog Treats",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/Ol-Roy-Bark-n-Bac-n-Dog-Treats-Lean-25-oz/15902627",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "a6081c2f-84a0-493e-a627-fed615b77139",
-      "comment": "Boneless Chicken Breast",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/Freshness-Guaranteed-Boneless-Chicken-Breasts-Family-Pack-4-6-5-75-lb/27935840",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3b6d5c4a-4e28-4dbe-a1d8-306c67372066",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___XRlFo .AddToCart__buttonAddToCart___6kAog", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "a6081c2f-84a0-493e-a627-fed615b77139",
-      "comment": "Paper Plates",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/Great-Value-Everyday-Paper-Lunch-Plates-8-5-8-100-Count/44390998",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "b9691a2b-f299-40e6-a5d0-834d8adad4f3",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___3oHbZ .addToCartTile__buttonAddToCart___2m2Zq",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___3oHbZ .addToCartTile__buttonAddToCart___2m2Zq", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "a6081c2f-84a0-493e-a627-fed615b77139",
-      "comment": "Cantina Thins Tortilla Chips",
-      "command": "open",
-      "target": "https://grocery.walmart.com/ip/On-the-Border-Mexican-Grill-Cantina-Thins-Tortilla-Chips-16-Oz/21738570",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "b9691a2b-f299-40e6-a5d0-834d8adad4f3",
-      "comment": "Add to Cart",
-      "command": "click",
-      "target": "css=.productTile__controlsContainerItemPage___3oHbZ .addToCartTile__buttonAddToCart___2m2Zq",
-      "targets": [
-        ["css=.productTile__controlsContainerItemPage___3oHbZ .addToCartTile__buttonAddToCart___2m2Zq", "css:finder"],
-        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
-        ["xpath=//section[@id='shoppingContent']/section/div/div/div/div[3]/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
-      ],
       "value": ""
     }]
   }],
   "suites": [{
-    "id": "9b57962f-3f68-4a37-92fa-84419b4c9d7d",
+    "id": "3e5ab8ad-2814-4528-aade-117c95a261d1",
     "name": "Default Suite",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["f997b664-2762-41ba-8e37-bff026103771"]
+    "tests": ["8118c773-4c08-46d5-a2c8-1756ad403ddb"]
   }],
   "urls": ["https://grocery.walmart.com/"],
   "plugins": []
